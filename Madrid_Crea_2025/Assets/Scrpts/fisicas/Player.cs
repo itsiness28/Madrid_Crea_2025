@@ -12,10 +12,7 @@ public class Player : MonoBehaviour
     private InputSO inputSO;
     [SerializeField]
     private PlayerControler controller;
-    [SerializeField]
-    private TrailRenderer line;
     #endregion
-
     #region Statds
     [SerializeField]
     private float moveSpeed;
@@ -41,6 +38,8 @@ public class Player : MonoBehaviour
 
     private Vector2 directionalInput;
 
+    private bool moveStarted = false;
+
     #region  timers
 
     private float inputBufferTimer = 0;
@@ -50,10 +49,12 @@ public class Player : MonoBehaviour
 
     #region Actions
     public Action<float> OnMoveAction;
+    public Action OnJumpAction;
     #endregion
 
     public Vector3 Velocity { get => velocity; set => velocity = value; }
     public PlayerControler Controller { get => controller; }
+
 
     private void OnEnable()
     {
@@ -61,6 +62,7 @@ public class Player : MonoBehaviour
 
         inputSO.OnJumpAnction += OnJumpInput;
         inputSO.OnJumpCanceledAction += OnCanceledJumpInput;
+
     }
     private void OnDisable()
     {
@@ -70,15 +72,15 @@ public class Player : MonoBehaviour
         inputSO.OnJumpCanceledAction -= OnCanceledJumpInput;
     }
 
-    void Update()
+    private void Update()
     {
 
         CalculateVelocity();
 
-        controller.Move(velocity * Time.deltaTime);
         if (controller.getInfoCollision().Below)
         {
             velocity.y = 0;
+            gravity = 0;
             airStandTimer = 0;
             coyoteTimer = coyoteTime;
         }
@@ -86,6 +88,8 @@ public class Player : MonoBehaviour
         {
             velocity.y *= 0.5f;
         }
+        controller.Move(velocity * Time.deltaTime);
+
         ManagerTimers();
     }
 
@@ -103,23 +107,35 @@ public class Player : MonoBehaviour
         {
             inputBufferTimer -= Time.deltaTime;
             Jump();
+
         }
     }
 
     private void SetDirectionalInput(Vector2 input)
     {
         directionalInput = input;
-        OnMoveAction.Invoke(directionalInput.x);
-
+        OnMoveAction?.Invoke(directionalInput.x);
+        moveStarted = true;
+        //gameManager.SaveRun(timer, input, transform.position);
     }
 
     private void OnJumpInput()
     {
 
         inputBufferTimer = inputBuffer;
-
     }
 
+    private void OnCanceledJumpInput()
+    {
+
+        if (Mathf.Sign(velocity.y) == 1 && airStandTimer <= 0 && !controller.getInfoCollision().Below)
+        {
+            velocity.y = Mathf.Sqrt(2 * 0.1f * Mathf.Abs(gravity * airStandGravityMod));
+            airStandTimer = (velocity.y / Math.Abs(gravity * airStandGravityMod)) * 2;
+
+        }
+        inputBufferTimer = 0;
+    }
     private void Jump()
     {
         if (controller.getInfoCollision().Below || coyoteTimer > 0)
@@ -128,22 +144,12 @@ public class Player : MonoBehaviour
             coyoteTimer = 0;
 
             inputBufferTimer = 0;
+            OnJumpAction?.Invoke();
+            moveStarted = true;
         }
     }
-    private void OnCanceledJumpInput()
-    {
 
-        if (Mathf.Sign(velocity.y) == 1 && airStandTimer <= 0 && !controller.getInfoCollision().Below)
-        {
-            velocity.y = Mathf.Sqrt(2 * 0.1f * Mathf.Abs(gravity * airStandGravityMod));
-            airStandTimer = (velocity.y / Math.Abs(gravity * airStandGravityMod)) * 2;
-        }
-        inputBufferTimer = 0;
-    }
-
-
-
-    void CalculateVelocity()
+    private void CalculateVelocity()
     {
 
         velocity.x = directionalInput.x * moveSpeed;
@@ -155,14 +161,10 @@ public class Player : MonoBehaviour
 
         if (airStandTimer <= 0)
         {
-            line.startColor = Color.black;
-            line.endColor = Color.black;
             velocity.y += gravity * Time.deltaTime;
         }
         else
         {
-            line.startColor = Color.white;
-            line.endColor = Color.white;
             velocity.y += gravity * airStandGravityMod * Time.deltaTime;
         }
 

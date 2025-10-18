@@ -13,11 +13,11 @@ public class PlayerEditor : Editor
 
     private SerializedProperty inputSO;
 
-    private SerializedProperty gameManager;
+
 
     private SerializedProperty controller;
 
-    private SerializedProperty line;
+    //private SerializedProperty line;
     #endregion
 
     #region Statds
@@ -53,9 +53,8 @@ public class PlayerEditor : Editor
     private void OnEnable()
     {
         inputSO = serializedObject.FindProperty("inputSO");
-        gameManager = serializedObject.FindProperty("gameManager");
         controller = serializedObject.FindProperty("controller");
-        line = serializedObject.FindProperty("line");
+        //line = serializedObject.FindProperty("line");
 
         moveSpeed = serializedObject.FindProperty("moveSpeed");
         jumpHeight = serializedObject.FindProperty("jumpHeight");
@@ -77,9 +76,8 @@ public class PlayerEditor : Editor
         if (foldoutComponents)
         {
             EditorGUILayout.PropertyField(inputSO);
-            EditorGUILayout.PropertyField(gameManager);
             EditorGUILayout.PropertyField(controller);
-            EditorGUILayout.PropertyField(line);
+            //EditorGUILayout.PropertyField(line);
         }
         EditorGUILayout.EndFoldoutHeaderGroup();
         foldoutStads = EditorGUILayout.BeginFoldoutHeaderGroup(foldoutStads, "Stads");

@@ -26,7 +26,6 @@ public class PlayerControler : RaycastController
 
         base.Start();
 
-
     }
 
     public void Move(Vector2 moveAmount)
@@ -59,7 +58,7 @@ public class PlayerControler : RaycastController
         float directionX = Mathf.Sign(moveAmount.x);
         float rayLengh = Mathf.Abs(moveAmount.x) + skinWidh;
         bool cornerCorrection = true;
-        int subsRays = ((Mathf.Sign(moveAmount.y) == -1 && !getInfoCollision().Below) ? horoizontalCornerCorrection: 0 );
+        int subsRays = ((Mathf.Sign(moveAmount.y) == -1 && !getInfoCollision().Below) ? horoizontalCornerCorrection : 0);
         for (int i = 0; i < horizontalRayCount - subsRays; i++)
         {
             Vector2 rayOrigin = (directionX == -1) ? raycastOrigins.bottomLeft + new Vector2(0, horizontalRaySpacing * subsRays) : raycastOrigins.bottomRight + new Vector2(0, horizontalRaySpacing * subsRays);
@@ -68,12 +67,14 @@ public class PlayerControler : RaycastController
 
             if (hit)
             {
+
                 moveAmount.x = (hit.distance - skinWidh) * directionX;
                 rayLengh = hit.distance;
 
 
                 collisions.Left = directionX == -1;
                 collisions.Right = directionX == 1;
+
                 cornerCorrection = false;
 
 
@@ -112,7 +113,7 @@ public class PlayerControler : RaycastController
 
                 moveAmount.y = (hit.distance - skinWidh) * directionY;
                 rayLengh = hit.distance;
-
+                Debug.Log(rayLengh);
                 collisions.Below = directionY == -1;
                 collisions.Above = directionY == 1;
                 cornerCorrection = false;
@@ -130,8 +131,8 @@ public class PlayerControler : RaycastController
 
     private void CastHorizontalCornerCorrection(float direction, float rayLengh, ref Vector2 moveAmount, int rayNumbers, Vector2 rayOrigin)
     {
-        
-        
+
+
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin + Vector2.up * horizontalRaySpacing * rayNumbers, Vector2.right * direction, rayLengh, collisionMask);
         if (hit)
         {
@@ -142,14 +143,14 @@ public class PlayerControler : RaycastController
             CastHorizontalCornerCorrection(direction, rayLengh, ref moveAmount, rayNumbers - 1, rayOrigin);
         }
         if (see)
-            Debug.DrawRay(rayOrigin + Vector2.up * horizontalRaySpacing * rayNumbers , Vector2.right  * direction * rayLengh, Color.blue);
+            Debug.DrawRay(rayOrigin + Vector2.up * horizontalRaySpacing * rayNumbers, Vector2.right * direction * rayLengh, Color.blue);
     }
 
     private void CastVerticalCornerCorrection(float rayLengh, ref Vector2 moveAmount, int rayNumbers, Vector2 rayOrigin)
     {
 
 
-        RaycastHit2D hit = Physics2D.Raycast(rayOrigin +  Vector2.right * horizontalRaySpacing * rayNumbers * (rayOrigin == raycastOrigins.topLeft ? 1 : -1), Vector2.up, rayLengh, collisionMask);
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigin + Vector2.right * horizontalRaySpacing * rayNumbers * (rayOrigin == raycastOrigins.topLeft ? 1 : -1), Vector2.up, rayLengh, collisionMask);
         if (hit)
         {
 
@@ -163,7 +164,7 @@ public class PlayerControler : RaycastController
             CastVerticalCornerCorrection(rayLengh, ref moveAmount, rayNumbers - 1, rayOrigin);
         }
         if (see)
-            Debug.DrawRay(rayOrigin + Vector2.right * horizontalRaySpacing * rayNumbers * (rayOrigin == raycastOrigins.topLeft ? 1 : -1),  Vector2.up * rayLengh, (raycastOrigins.topLeft == rayOrigin) ? Color.yellow : Color.blue);
+            Debug.DrawRay(rayOrigin + Vector2.right * horizontalRaySpacing * rayNumbers * (rayOrigin == raycastOrigins.topLeft ? 1 : -1), Vector2.up * rayLengh, (raycastOrigins.topLeft == rayOrigin) ? Color.yellow : Color.blue);
     }
     public CollisionInfo getInfoCollision()
     {
@@ -172,37 +173,38 @@ public class PlayerControler : RaycastController
 
     }
 
-    [Serializable]
-    public struct CollisionInfo
+
+
+}
+[Serializable]
+public struct CollisionInfo
+{
+
+    private bool below;
+    private bool right;
+    private bool above;
+    private bool left;
+
+    private Vector3 moveAmountOld;
+
+    public bool Above { get => above; set => above = value; }
+    public bool Below { get => below; set => below = value; }
+    public bool Left { get => left; set => left = value; }
+    public bool Right { get => right; set => right = value; }
+
+    public Vector3 MoveAmountOld { get => moveAmountOld; set => moveAmountOld = value; }
+
+    public void ResetHorizontal()
     {
 
-        private bool below;
-        private bool right;
-        private bool above;
-        private bool left;
 
-        private Vector3 moveAmountOld;
+        left = right = false;
 
-        public bool Above { get => above; set => above = value; }
-        public bool Below { get => below; set => below = value; }
-        public bool Left { get => left; set => left = value; }
-        public bool Right { get => right; set => right = value; }
+    }
 
-        public Vector3 MoveAmountOld { get => moveAmountOld; set => moveAmountOld = value; }
-
-        public void ResetHorizontal()
-        {
-
-
-            left = right = false;
-
-        }
-
-        public void ResetVertical()
-        {
-            above = below = false;
-        }
-
+    public void ResetVertical()
+    {
+        above = below = false;
     }
 
 }
