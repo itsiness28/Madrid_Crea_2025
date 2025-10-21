@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class GameManager : MonoBehaviour
     [Header("Past & Present TileMaps")]
     [SerializeField] GameObject pastTileMap;
     [SerializeField] GameObject presentTileMap;
+
+    [Header("Scene names")]
+    [SerializeField] string previousScene;
+    [SerializeField] string nextScene;
 
     public enum TimeZone { PAST, PRESENT}
     TimeZone currentTime;
@@ -48,6 +53,16 @@ public class GameManager : MonoBehaviour
             presentTileMap.SetActive(true);
             pastTileMap.SetActive(false);
         }
+    }
+
+    public void GoToPreviousScene()
+    {
+        SceneManager.LoadScene(previousScene);
+    }
+
+    public void GoToNextScene()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 
 

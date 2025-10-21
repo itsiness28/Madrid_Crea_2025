@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class Player_Movement : MonoBehaviour
 {
     public InputSystem_Actions actions;
+    [SerializeField] GameManager gameManager;
 
     [Header("Movement Values")]
     [SerializeField] float speed;
@@ -83,5 +84,17 @@ public class Player_Movement : MonoBehaviour
     {
         Gizmos.color = Color.purple;
         Gizmos.DrawWireSphere(groundCheckTransform.position, groundCheckRadius);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("pSceneTrigger"))
+        {
+            gameManager.GoToPreviousScene();
+        }
+        else if (collision.CompareTag("nSceneTrigger"))
+        {
+            gameManager.GoToNextScene();
+        }
     }
 }
