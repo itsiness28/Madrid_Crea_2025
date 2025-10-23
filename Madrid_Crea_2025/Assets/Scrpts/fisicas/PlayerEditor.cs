@@ -4,21 +4,10 @@ using UnityEngine;
 using UnityEditor;
 using System;
 
-[CustomEditor(typeof(Player))]
+[CustomEditor(typeof(PlayerData))]
 public class PlayerEditor : Editor
 {
     #region Properties
-
-    #region Componets
-
-    private SerializedProperty inputSO;
-
-
-
-    private SerializedProperty controller;
-
-    //private SerializedProperty line;
-    #endregion
 
     #region Statds
     private SerializedProperty moveSpeed;
@@ -52,9 +41,6 @@ public class PlayerEditor : Editor
 
     private void OnEnable()
     {
-        inputSO = serializedObject.FindProperty("inputSO");
-        controller = serializedObject.FindProperty("controller");
-        //line = serializedObject.FindProperty("line");
 
         moveSpeed = serializedObject.FindProperty("moveSpeed");
         jumpHeight = serializedObject.FindProperty("jumpHeight");
@@ -71,15 +57,8 @@ public class PlayerEditor : Editor
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
-        Player player = (Player)target;
-        foldoutComponents = EditorGUILayout.BeginFoldoutHeaderGroup(foldoutComponents, "Components");
-        if (foldoutComponents)
-        {
-            EditorGUILayout.PropertyField(inputSO);
-            EditorGUILayout.PropertyField(controller);
-            //EditorGUILayout.PropertyField(line);
-        }
-        EditorGUILayout.EndFoldoutHeaderGroup();
+        PlayerData player = (PlayerData)target;
+
         foldoutStads = EditorGUILayout.BeginFoldoutHeaderGroup(foldoutStads, "Stads");
         if (foldoutStads)
         {
@@ -94,7 +73,7 @@ public class PlayerEditor : Editor
 
         }
         heigth2AirStand.floatValue = Mathf.Clamp(heigth2AirStand.floatValue, 0, jumpHeight.floatValue);
-        jumpVelocity.floatValue = MathF.Sqrt(2 * jumpHeight.floatValue * Math.Abs(gravity.floatValue));
+        jumpVelocity.floatValue = MathF.Sqrt(2 * jumpHeight.floatValue * Math.Abs(gravity.floatValue * 9.81f));
         EditorGUILayout.PropertyField(jumpVelocity);
         serializedObject.ApplyModifiedProperties();
     }

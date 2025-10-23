@@ -25,7 +25,7 @@ public class PlayerAnimatorControler : MonoBehaviour
             spriteRenderer.flipX = false;
         }
         animator.SetFloat("VelocityY", rb.linearVelocityY);
-        animator.SetFloat("VelocityX", Mathf.Abs(rb.linearVelocityX));
+        animator.SetFloat("VelocityX", Mathf.Abs(player.MoveInput));
         animator.SetBool("Below", player.IsGrounded);
     }
 }
