@@ -31,6 +31,8 @@ public class Player_Movement : MonoBehaviour
 
     Rigidbody2D rb;
 
+    public bool IsGrounded { get => isGrounded; }
+
     private void Awake()
     {
         actions = new InputSystem_Actions();
@@ -73,6 +75,7 @@ public class Player_Movement : MonoBehaviour
                 //rb.gravityScale = gravityFactor;
 
                 rb.linearVelocityY = jumpForce;
+                isGrounded = false;
             }
         }
     }
@@ -90,15 +93,16 @@ public class Player_Movement : MonoBehaviour
 
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheckTransform.position, groundCheckRadius, groundLayer);
 
+        
+        isGrounded = Physics2D.OverlapBox(groundCheckTransform.position, new Vector2(groundCheckRadius * 2, 0.015f), 0, groundLayer);
         if (!isGrounded)
         {
             if (transform.position.y >= heightToReach)
             {
                 rb.gravityScale = floatingGravity;
                 timerUsed -= Time.deltaTime;
-                if(timerUsed <= 0)
+                if (timerUsed <= 0)
                 {
                     heightToReach = transform.position.y + 10;
                     timerUsed = floatingTimer;
@@ -125,7 +129,7 @@ public class Player_Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("pSceneTrigger"))
+        if (collision.CompareTag("pSceneTrigger"))
         {
             gameManager.GoToPreviousScene();
         }

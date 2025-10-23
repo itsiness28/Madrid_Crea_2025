@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5548514754986131652}
   - component: {fileID: 3985802074113784642}
+  - component: {fileID: 6870287108111312064}
   - component: {fileID: 3141279934843159714}
   - component: {fileID: 1461708255560426761}
   - component: {fileID: 1303740381496410252}
@@ -127,6 +128,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6870287108111312064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394073528169092640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c6cab36901bc864cbafb06dede5d48d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimatorControler
+  animator: {fileID: 3879118343568197956}
+  spriteRenderer: {fileID: 3985802074113784642}
+  player: {fileID: 3141279934843159714}
+  rb: {fileID: 1461708255560426761}
 --- !u!114 &3141279934843159714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,14 +157,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Movement
   gameManager: {fileID: 0}
-  speed: 9
-  jumpForce: 23
+  speed: 8
+  jumpForce: 18
   gravityFactor: 6
   jumpHeight: 3
-  gravityFactorChanger: 0.75
+  gravityFactorChanger: 0.5
   floatingTimer: 0.5
   groundCheckTransform: {fileID: 5907284179323367325}
-  groundCheckRadius: 0.15
+  groundCheckRadius: 0.17
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -176,7 +193,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &1303740381496410252
 BoxCollider2D:
