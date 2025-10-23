@@ -10,7 +10,16 @@ public class Player_Movement : MonoBehaviour
     [Header("Movement Values")]
     [SerializeField] float speed;
     [SerializeField] float jumpForce;
+    [SerializeField] float gravityFactor;
     float moveInput;
+
+    [Header("Jump Momentum Values")]
+    [SerializeField] float jumpHeight;
+    [SerializeField] float gravityFactorChanger;
+    [SerializeField] float floatingTimer;
+    float timerUsed;
+    float heightToReach;
+    float floatingGravity;
 
     [Header("Ground Check Values")]
     [SerializeField] Transform groundCheckTransform;
@@ -26,6 +35,7 @@ public class Player_Movement : MonoBehaviour
     {
         actions = new InputSystem_Actions();
     }
+
 
     private void OnEnable()
     {
@@ -57,6 +67,11 @@ public class Player_Movement : MonoBehaviour
         {
             if (isGrounded)
             {
+                float initialHeight = transform.position.y;
+                heightToReach = initialHeight + jumpHeight;
+                timerUsed = floatingTimer;
+                //rb.gravityScale = gravityFactor;
+
                 rb.linearVelocityY = jumpForce;
             }
         }
@@ -67,12 +82,34 @@ public class Player_Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = gravityFactor;
+        floatingGravity = gravityFactor * gravityFactorChanger;
+        timerUsed = floatingTimer;
     }
 
 
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheckTransform.position, groundCheckRadius, groundLayer);
+
+        if (!isGrounded)
+        {
+            if (transform.position.y >= heightToReach)
+            {
+                rb.gravityScale = floatingGravity;
+                timerUsed -= Time.deltaTime;
+                if(timerUsed <= 0)
+                {
+                    heightToReach = transform.position.y + 10;
+                    timerUsed = floatingTimer;
+                    rb.gravityScale = gravityFactor;
+                }
+            }
+        }
+        else
+        {
+            rb.gravityScale = gravityFactor;
+        }
     }
 
     private void FixedUpdate()
