@@ -33,10 +33,10 @@ public class DialogueDisplay : MonoBehaviour
 
     private Coroutine displayLineCoroutine;
 
-    [SerializeField]
-    private GameObject[] choices;
-    [SerializeField]
-    private TMP_Text[] choicesText;
+    //[SerializeField]
+    //private GameObject[] choices;
+    //[SerializeField]
+    //private TMP_Text[] choicesText;
 
     //[Header("Audio")]
     //[SerializeField]
@@ -138,7 +138,8 @@ public class DialogueDisplay : MonoBehaviour
         dialogueText.text = "";
 
         //SetCurrentAudioInfo(defaultAudioInfo.ID);
-
+        
+        //Cargar la siguiente escena
 
     }
 
@@ -170,7 +171,7 @@ public class DialogueDisplay : MonoBehaviour
         dialogueText.maxVisibleCharacters = 0;
 
         continueIcone.SetActive(false);
-        HideChoices();
+        //HideChoices();
 
         canContinueToNextLine = false;
 
@@ -204,7 +205,7 @@ public class DialogueDisplay : MonoBehaviour
         }
 
         continueIcone.SetActive(true);
-        DisplayChoices();
+        //DisplayChoices();
 
         canContinueToNextLine = true;
 
@@ -283,24 +284,24 @@ public class DialogueDisplay : MonoBehaviour
         dialogueText.maxVisibleCharacters = line.Length;
 
         continueIcone.SetActive(true);
-        DisplayChoices();
+        //DisplayChoices();
 
         canContinueToNextLine = true;
 
         displayLineCoroutine = null;
     }
 
-    void HideChoices()
-    {
+    //void HideChoices()
+    //{
 
-        foreach (GameObject choiceButtom in choices)
-        {
+    //    foreach (GameObject choiceButtom in choices)
+    //    {
 
-            choiceButtom.SetActive(false);
+    //        choiceButtom.SetActive(false);
 
-        }
+    //    }
 
-    }
+    //}
 
     void HandleTags(List<string> currentTags)
     {
@@ -330,43 +331,43 @@ public class DialogueDisplay : MonoBehaviour
 
     }
 
-    private void DisplayChoices()
-    {
+    //private void DisplayChoices()
+    //{
 
 
-        List<Choice> currentChoices = currentStory.currentChoices;
+    //    List<Choice> currentChoices = currentStory.currentChoices;
 
-        int index = 0;
+    //    int index = 0;
 
-        foreach (Choice choice in currentChoices)
-        {
+    //    foreach (Choice choice in currentChoices)
+    //    {
 
-            choices[index].SetActive(true);
-            choicesText[index].text = choice.text;
-            index++;
-        }
+    //        choices[index].SetActive(true);
+    //        choicesText[index].text = choice.text;
+    //        index++;
+    //    }
 
-        for (int i = index; i < choices.Length; i++)
-        {
+    //    for (int i = index; i < choices.Length; i++)
+    //    {
 
-            choices[i].SetActive(false);
+    //        choices[i].SetActive(false);
 
-        }
+    //    }
 
-    }
+    //}
 
-    public void MakeChoice(int choiceIndex)
-    {
-        if (canContinueToNextLine)
-        {
+    //public void MakeChoice(int choiceIndex)
+    //{
+    //    if (canContinueToNextLine)
+    //    {
 
-            currentStory.ChooseChoiceIndex(choiceIndex);
-            ContinueStory();
+    //        currentStory.ChooseChoiceIndex(choiceIndex);
+    //        ContinueStory();
 
-        }
+    //    }
 
 
 
-    }
+    //}
 
 }

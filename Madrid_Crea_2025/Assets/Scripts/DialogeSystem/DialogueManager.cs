@@ -7,8 +7,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Dialogue Manager")]
 public class DialogueManager : ScriptableObject
 {
-    [SerializeField]
-    private TextAsset loadGlobalsJSON;
 
     public event Action<Story> OnEnterDialogueMode;
     public event Action OnContinuedialog;
