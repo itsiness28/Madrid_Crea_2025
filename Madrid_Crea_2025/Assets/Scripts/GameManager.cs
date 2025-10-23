@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] string previousScene;
     [SerializeField] string nextScene;
 
+    [Header("Sprite Mask")]
+    [SerializeField] SpriteMask spriteMask;
+
     public enum TimeZone { PAST, PRESENT}
     TimeZone currentTime;
 
@@ -43,15 +46,19 @@ public class GameManager : MonoBehaviour
     {
         if(currentTime == TimeZone.PRESENT)
         {
+            spriteMask.SetGoToPastAnimTrigger();
+
             currentTime = TimeZone.PAST;
-            presentTileMap.SetActive(false);
+            //presentTileMap.SetActive(false);
             pastTileMap.SetActive(true);
         }
         else
         {
+            spriteMask.SetGoToPresentTrigger();
+
             currentTime = TimeZone.PRESENT;
             presentTileMap.SetActive(true);
-            pastTileMap.SetActive(false);
+            //pastTileMap.SetActive(false);
         }
     }
 
