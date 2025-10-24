@@ -73,7 +73,7 @@ public class PlayerEditor : Editor
 
         }
         heigth2AirStand.floatValue = Mathf.Clamp(heigth2AirStand.floatValue, 0, jumpHeight.floatValue);
-        jumpVelocity.floatValue = MathF.Sqrt(2 * jumpHeight.floatValue * Math.Abs(gravity.floatValue * 9.81f));
+        jumpVelocity.floatValue = Mathf.Sqrt(2 * jumpHeight.floatValue * Mathf.Abs(gravity.floatValue * 9.81f));
         EditorGUILayout.PropertyField(jumpVelocity);
         serializedObject.ApplyModifiedProperties();
     }

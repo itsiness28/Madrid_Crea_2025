@@ -1,4 +1,3 @@
-using Unity.Android.Gradle.Manifest;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -20,6 +19,7 @@ public class Player_Movement : MonoBehaviour
     //[SerializeField] float jumpHeight;
     //[SerializeField] float gravityFactorChanger;
     //[SerializeField] float floatingTimer;
+    [SerializeField]
     float airStandTimer;
     //float heightToReach;
     //float floatingGravity;
@@ -36,6 +36,7 @@ public class Player_Movement : MonoBehaviour
 
     public bool IsGrounded { get => isGrounded; }
     public float MoveInput { get => moveInput; }
+    public PlayerData PlayerData { get => playerData; }
 
     private void Awake()
     {
@@ -93,23 +94,26 @@ public class Player_Movement : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
 
 
         isGrounded = Physics2D.OverlapBox(groundCheckTransform.position, new Vector2(groundCheckRadius * 2, 0.015f), 0, groundLayer);
-        Debug.Log((rb.linearVelocityY < Mathf.Sqrt((playerData.JumpHeight - playerData.Heigth2AirStand) * Mathf.Abs(playerData.Gravity * 9.81f))) + " / " + (rb.linearVelocityY > 0 )+ " / " + (airStandTimer <= 0));
-        if (rb.linearVelocityY < Mathf.Sqrt((playerData.Heigth2AirStand - playerData.Heigth2AirStand) * Mathf.Abs(playerData.Gravity * 9.81f)) && rb.linearVelocityY > 0 && airStandTimer <= 0)
+        
+
+        rb.linearVelocityX = moveInput * playerData.MoveSpeed;
+        if (rb.linearVelocityY < Mathf.Sqrt(2 * (playerData.JumpHeight - playerData.Heigth2AirStand) * Mathf.Abs(playerData.Gravity * 9.81f))
+            && rb.linearVelocityY > 0
+            && airStandTimer <= 0 && !isGrounded)
         {
-            Debug.Log("hola");
-            rb.linearVelocityY = Mathf.Sqrt(2 * (playerData.JumpHeight - playerData.Heigth2AirStand) * Mathf.Abs(playerData.Gravity * 9.81f * playerData.AirStandGravityMod));
+            rb.linearVelocityY = Mathf.Sqrt(2 * (playerData.JumpHeight - playerData.Heigth2AirStand) * Mathf.Abs(playerData.Gravity  * playerData.AirStandGravityMod) * 9.81f);
             airStandTimer = (rb.linearVelocityY / Mathf.Abs(playerData.Gravity * 9.81f * playerData.AirStandGravityMod)) * 2;
             rb.gravityScale = playerData.Gravity * playerData.AirStandGravityMod;
 
         }
         if (airStandTimer > 0)
         {
-            airStandTimer -= Time.deltaTime;
+            airStandTimer -= Time.fixedDeltaTime;
         }
         if (airStandTimer <= 0)
         {
@@ -120,10 +124,6 @@ public class Player_Movement : MonoBehaviour
         rb.linearVelocityY = Mathf.Clamp(rb.linearVelocityY, -playerData.TerminalSpeed, playerData.JumpVelocity);
     }
 
-    private void FixedUpdate()
-    {
-        rb.linearVelocityX = moveInput * playerData.MoveSpeed;
-    }
 
     private void OnDrawGizmosSelected()
     {

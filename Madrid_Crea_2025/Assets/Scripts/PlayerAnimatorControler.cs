@@ -27,5 +27,18 @@ public class PlayerAnimatorControler : MonoBehaviour
         animator.SetFloat("VelocityY", rb.linearVelocityY);
         animator.SetFloat("VelocityX", Mathf.Abs(player.MoveInput));
         animator.SetBool("Below", player.IsGrounded);
+        CheckGravity();
+    }
+
+    private void CheckGravity()
+    {
+        if (rb.gravityScale == player.PlayerData.Gravity)
+        {
+            spriteRenderer.color = Color.white;
+        }
+        else
+        {
+            spriteRenderer.color = Color.red;
+        }
     }
 }
