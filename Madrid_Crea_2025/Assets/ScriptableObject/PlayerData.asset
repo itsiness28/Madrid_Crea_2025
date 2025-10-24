@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 8
   jumpHeight: 2.5
-  gravity: 6
+  gravity: 8
   terminalSpeed: 5
   inputBuffer: 1
-  coyoteTime: 1
+  coyoteTime: 0.2
   heigth2AirStand: 1
-  airStandGravityMod: 0.1
-  jumpVelocity: 17.155174
+  airStandGravityMod: 0.5
+  jumpVelocity: 19.80909

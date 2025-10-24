@@ -108,7 +108,7 @@ public class Player_Movement : MonoBehaviour
         }
         if (inputBufferTimer > 0)
         {
-            inputBufferTimer -= Time.deltaTime;
+            inputBufferTimer -= Time.fixedDeltaTime;
             Jump();
 
         }
