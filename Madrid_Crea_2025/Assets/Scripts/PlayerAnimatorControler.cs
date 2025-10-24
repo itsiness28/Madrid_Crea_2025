@@ -16,18 +16,18 @@ public class PlayerAnimatorControler : MonoBehaviour
 
     private void Update()
     {
-        if (rb.linearVelocityX < 0)
+        if (player.MoveInput < 0)
         {
             spriteRenderer.flipX = true;
         }
-        else if (rb.linearVelocityX > 0)
+        else if (player.MoveInput > 0)
         {
             spriteRenderer.flipX = false;
         }
         animator.SetFloat("VelocityY", rb.linearVelocityY);
         animator.SetFloat("VelocityX", Mathf.Abs(player.MoveInput));
         animator.SetBool("Below", player.IsGrounded);
-        CheckGravity();
+        
     }
 
     private void CheckGravity()

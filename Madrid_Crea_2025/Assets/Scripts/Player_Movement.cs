@@ -9,20 +9,11 @@ public class Player_Movement : MonoBehaviour
     [SerializeField]
     PlayerData playerData;
 
-    //[Header("Movement Values")]
-    //[SerializeField] float speed;
-    //[SerializeField] float jumpForce;
-    //[SerializeField] float gravityFactor;
+
     float moveInput;
 
-    [Header("Jump Momentum Values")]
-    //[SerializeField] float jumpHeight;
-    //[SerializeField] float gravityFactorChanger;
-    //[SerializeField] float floatingTimer;
-    [SerializeField]
+
     float airStandTimer;
-    //float heightToReach;
-    //float floatingGravity;
 
     [Header("Ground Check Values")]
     [SerializeField] Transform groundCheckTransform;
@@ -33,6 +24,8 @@ public class Player_Movement : MonoBehaviour
 
 
     Rigidbody2D rb;
+    private float inputBufferTimer;
+    private float coyoteTimer;
 
     public bool IsGrounded { get => isGrounded; }
     public float MoveInput { get => moveInput; }
@@ -63,6 +56,64 @@ public class Player_Movement : MonoBehaviour
         actions.Player.Jump.performed -= JumpAction;
     }
 
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = playerData.Gravity;
+        airStandTimer = 0;
+    }
+    void FixedUpdate()
+    {
+
+
+        isGrounded = Physics2D.OverlapBox(groundCheckTransform.position, new Vector2(groundCheckRadius * 2, 0.015f), 0, groundLayer);
+
+
+        rb.linearVelocityX = moveInput * playerData.MoveSpeed;
+        if (rb.linearVelocityY < Mathf.Sqrt(2 * (playerData.JumpHeight - playerData.Heigth2AirStand) * Mathf.Abs(playerData.Gravity * 9.81f))
+            && rb.linearVelocityY > 0
+            && airStandTimer <= 0 && !isGrounded)
+        {
+            rb.linearVelocityY = Mathf.Sqrt(2 * (playerData.JumpHeight - playerData.Heigth2AirStand) * Mathf.Abs(playerData.Gravity * playerData.AirStandGravityMod) * 9.81f);
+            airStandTimer = (rb.linearVelocityY / Mathf.Abs(playerData.Gravity * 9.81f * playerData.AirStandGravityMod)) * 2;
+            rb.gravityScale = playerData.Gravity * playerData.AirStandGravityMod;
+
+        }
+
+        
+        ManageTimers();
+
+        rb.linearVelocityY = Mathf.Clamp(rb.linearVelocityY, -playerData.TerminalSpeed, playerData.JumpVelocity);
+    }
+
+    private void ManageTimers()
+    {
+        if (isGrounded)
+        {
+            airStandTimer = 0;
+            coyoteTimer = playerData.CoyoteTime;
+        }
+        if (airStandTimer > 0)
+        {
+            airStandTimer -= Time.fixedDeltaTime;
+        }
+        if (airStandTimer <= 0)
+        {
+
+            rb.gravityScale = playerData.Gravity;
+        }
+        if (!isGrounded && coyoteTimer > 0)
+        {
+            coyoteTimer -= Time.fixedDeltaTime;
+        }
+        if (inputBufferTimer > 0)
+        {
+            inputBufferTimer -= Time.deltaTime;
+            Jump();
+
+        }
+    }
+
     private void MoveAction(InputAction.CallbackContext ctx)
     {
         moveInput = ctx.ReadValue<Vector2>().x;
@@ -72,57 +123,26 @@ public class Player_Movement : MonoBehaviour
     {
         if (ctx.performed)
         {
-            if (isGrounded)
-            {
-                //float initialHeight = transform.position.y;
-                //heightToReach = initialHeight + playerData.Heigth2AirStand;
-                //rb.gravityScale = gravityFactor;
-
-                rb.linearVelocityY = playerData.JumpVelocity;
-                isGrounded = false;
-            }
-        }
-    }
-
-
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = playerData.Gravity;
-        airStandTimer = 0;
-    }
-
-
-    void FixedUpdate()
-    {
-
-
-        isGrounded = Physics2D.OverlapBox(groundCheckTransform.position, new Vector2(groundCheckRadius * 2, 0.015f), 0, groundLayer);
-        
-
-        rb.linearVelocityX = moveInput * playerData.MoveSpeed;
-        if (rb.linearVelocityY < Mathf.Sqrt(2 * (playerData.JumpHeight - playerData.Heigth2AirStand) * Mathf.Abs(playerData.Gravity * 9.81f))
-            && rb.linearVelocityY > 0
-            && airStandTimer <= 0 && !isGrounded)
-        {
-            rb.linearVelocityY = Mathf.Sqrt(2 * (playerData.JumpHeight - playerData.Heigth2AirStand) * Mathf.Abs(playerData.Gravity  * playerData.AirStandGravityMod) * 9.81f);
-            airStandTimer = (rb.linearVelocityY / Mathf.Abs(playerData.Gravity * 9.81f * playerData.AirStandGravityMod)) * 2;
-            rb.gravityScale = playerData.Gravity * playerData.AirStandGravityMod;
-
-        }
-        if (airStandTimer > 0)
-        {
-            airStandTimer -= Time.fixedDeltaTime;
-        }
-        if (airStandTimer <= 0)
-        {
+            inputBufferTimer = playerData.InputBuffer;
             
-            rb.gravityScale = playerData.Gravity;
         }
-
-        rb.linearVelocityY = Mathf.Clamp(rb.linearVelocityY, -playerData.TerminalSpeed, playerData.JumpVelocity);
     }
+
+    private void Jump()
+    {
+        if (isGrounded || coyoteTimer > 0)
+        {
+
+            rb.linearVelocityY = playerData.JumpVelocity;
+            isGrounded = false;
+            coyoteTimer = 0;
+
+            inputBufferTimer = 0;
+        }
+    }
+
+
+
 
 
     private void OnDrawGizmosSelected()
