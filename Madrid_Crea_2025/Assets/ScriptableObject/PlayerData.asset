@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   moveSpeed: 8
-  jumpHeight: 2.5
+  jumpHeight: 2.75
   gravity: 8
-  terminalSpeed: 5
-  inputBuffer: 1
-  coyoteTime: 0.2
-  heigth2AirStand: 1
+  terminalSpeed: 15
+  inputBuffer: 0.1
+  coyoteTime: 0.075
+  heigth2AirStand: 2
   airStandGravityMod: 0.5
-  jumpVelocity: 19.80909
+  jumpVelocity: 20.775948
