@@ -163,6 +163,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
+  soundController: {fileID: 0}
+  audioPasos: {fileID: 8300000, guid: 31cd8d5dcebf04443bfe0259f9186bf3, type: 3}
+  audioSalto: {fileID: 8300000, guid: 32dea3911b14ad24492f67a729f800a9, type: 3}
 --- !u!50 &1461708255560426761
 Rigidbody2D:
   serializedVersion: 5

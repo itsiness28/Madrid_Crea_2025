@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -26,6 +27,11 @@ public class Player_Movement : MonoBehaviour
     Rigidbody2D rb;
     private float inputBufferTimer;
     private float coyoteTimer;
+
+    [Header("Audio")]
+    [SerializeField] SoundController soundController;
+    [SerializeField] AudioClip audioPasos;
+    [SerializeField] AudioClip audioSalto;
 
     public bool IsGrounded { get => isGrounded; }
     public float MoveInput { get => moveInput; }
@@ -138,6 +144,8 @@ public class Player_Movement : MonoBehaviour
             coyoteTimer = 0;
 
             inputBufferTimer = 0;
+
+            PlayAudioSalto();
         }
     }
 
@@ -149,6 +157,24 @@ public class Player_Movement : MonoBehaviour
     public void EnablePlayerMovement()
     {
         actions.Player.Enable();
+    }
+
+    public void PlayAudioPasos()
+    {
+        float randomPitch = Random.Range(1.2f, 1.6f);
+        AudioSource x = soundController.GetComponent<AudioSource>();
+        x.pitch = randomPitch;
+        x.volume = 0.9f;
+        soundController.PlaySonido(audioPasos);
+    }
+
+    public void PlayAudioSalto()
+    {
+        float randomPitch = Random.Range(0.8f, 1.2f);
+        AudioSource x = soundController.GetComponent<AudioSource>();
+        x.pitch = randomPitch;
+        x.volume = 0.1f;
+        soundController.PlaySonido(audioSalto);
     }
 
 
