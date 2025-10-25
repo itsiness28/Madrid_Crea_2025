@@ -127,8 +127,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-<<<<<<< HEAD
-  shockwavePrefab: {fileID: 681739259453342566, guid: e45faf5c93e85de4c9f8c80a634d7796, type: 3}
-=======
   shockwavePrefab: {fileID: 5065213140006589852, guid: 5cbfcac7b63c6ff4c91a4132b915fdbe, type: 3}
->>>>>>> 78fdaf0ad5cec79793a8e19cc145aeaf59b85b3b
