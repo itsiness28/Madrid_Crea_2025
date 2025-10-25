@@ -141,8 +141,15 @@ public class Player_Movement : MonoBehaviour
         }
     }
 
+    public void DisablePlayerMovement()
+    {
+        actions.Player.Disable();
+    }
 
-
+    public void EnablePlayerMovement()
+    {
+        actions.Player.Enable();
+    }
 
 
     private void OnDrawGizmosSelected()

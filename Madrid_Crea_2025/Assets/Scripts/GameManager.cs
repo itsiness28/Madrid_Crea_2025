@@ -14,8 +14,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] string previousScene;
     [SerializeField] string nextScene;
 
-    [Header("Sprite Mask")]
+    [Header("Timer Values")]
+    [SerializeField] float stopTimeTimer;
+    float actualTimer;
+    bool changingTiming;
+
+    [Header("Dependencias")]
     [SerializeField] SpriteMask spriteMask;
+    [SerializeField] Player_Movement player;
 
     public enum TimeZone { PAST, PRESENT}
     TimeZone currentTime;
@@ -25,8 +31,8 @@ public class GameManager : MonoBehaviour
         actions = new InputSystem_Actions();
 
         currentTime = TimeZone.PRESENT;
-        presentTileMap.SetActive(true);
-        pastTileMap.SetActive(false);
+        //presentTileMap.SetActive(true);
+        //pastTileMap.SetActive(false);
     }
 
     private void OnEnable()
@@ -44,21 +50,31 @@ public class GameManager : MonoBehaviour
 
     private void TimeTrigger(InputAction.CallbackContext ctx)
     {
-        if(currentTime == TimeZone.PRESENT)
+        if (player.IsGrounded)
         {
-            spriteMask.SetGoToPastAnimTrigger();
+            actions.Player.Disable();
+            if (currentTime == TimeZone.PRESENT)
+            {
+                player.DisablePlayerMovement();
+                changingTiming = true;
 
-            currentTime = TimeZone.PAST;
-            //presentTileMap.SetActive(false);
-            pastTileMap.SetActive(true);
-        }
-        else
-        {
-            spriteMask.SetGoToPresentTrigger();
+                spriteMask.SetGoToPastAnimTrigger();
 
-            currentTime = TimeZone.PRESENT;
-            presentTileMap.SetActive(true);
-            //pastTileMap.SetActive(false);
+                currentTime = TimeZone.PAST;
+
+                pastTileMap.SetActive(true);
+            }
+            else
+            {
+                player.DisablePlayerMovement();
+                changingTiming = true;
+
+                spriteMask.SetGoToPresentTrigger();
+
+                currentTime = TimeZone.PRESENT;
+
+                presentTileMap.SetActive(true);
+            }
         }
     }
 
@@ -75,12 +91,32 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+        actualTimer = stopTimeTimer;
     }
 
 
     void Update()
     {
-        
+        if (changingTiming)
+        {
+            actualTimer -= Time.deltaTime;
+            if(actualTimer <= 0)
+            {
+                actualTimer = stopTimeTimer;
+                changingTiming = false;
+                player.EnablePlayerMovement();
+                actions.Player.Enable();
+                if (currentTime == TimeZone.PRESENT)
+                {
+                    presentTileMap.SetActive(true);
+                    pastTileMap.SetActive(false);
+                }
+                else
+                {
+                    presentTileMap.SetActive(false);
+                    pastTileMap.SetActive(true);
+                }
+            }
+        }
     }
 }
