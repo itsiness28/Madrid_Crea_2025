@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] Player_Movement player;
     [SerializeField] Door door;
 
+    [SerializeField]
+    Checker[] checkers;
+
     public enum TimeZone { PAST, PRESENT}
     TimeZone currentTime;
 
@@ -55,6 +58,10 @@ public class GameManager : MonoBehaviour
     {
         if (player.IsGrounded)
         {
+            foreach (Checker checker in checkers)
+            {
+                checker.Check();
+            }
             actions.Player.Disable();
             if (currentTime == TimeZone.PRESENT)
             {
