@@ -787,7 +787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: 149.5}
+  m_AnchoredPosition: {x: 8, y: 123}
   m_SizeDelta: {x: 675.281, y: 151.0076}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &832768451
@@ -810,7 +810,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "T\xEDtulo"
+  m_text: El Penta
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9e8c69fff3be49841ac30cc46967cfb6, type: 2}
   m_sharedMaterial: {fileID: 6920488957257253917, guid: 9e8c69fff3be49841ac30cc46967cfb6, type: 2}
@@ -837,8 +837,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 139.1
-  m_fontSizeBase: 139.1
+  m_fontSize: 73.09
+  m_fontSizeBase: 73.09
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
