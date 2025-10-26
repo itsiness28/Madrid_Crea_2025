@@ -48,6 +48,6 @@ MonoBehaviour:
   presentTileMap: {fileID: 0}
   previousScene: MainMenu
   nextScene: 1_1
-  stopTimeTimer: 2
+  stopTimeTimer: 1.75
   spriteMask: {fileID: 0}
   player: {fileID: 0}
