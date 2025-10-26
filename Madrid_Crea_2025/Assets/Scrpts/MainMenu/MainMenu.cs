@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +10,13 @@ public class MainMenu : MonoBehaviour
     private VolumenConfigurationSO v;
     public void PlayGame(string Scene)
     {
+        //SceneManager.LoadScene(Scene);
+        StartCoroutine(PlayGameTime(Scene));
+    }
+
+    IEnumerator PlayGameTime(string Scene)
+    {
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(Scene);
     }
 

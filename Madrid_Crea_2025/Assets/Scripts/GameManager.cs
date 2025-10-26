@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] SpriteMask spriteMask;
     [SerializeField] Player_Movement player;
     [SerializeField] Door door;
+    [SerializeField] SceneFader sceneFader;
 
     [SerializeField]
     Checker[] checkers;
@@ -103,6 +104,8 @@ public class GameManager : MonoBehaviour
         player.DisablePlayerMovement();
         door.SetPliOpenTrigger();
         yield return new WaitForSeconds(1f);
+        sceneFader.SetFadeOutTrigger();
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(nextScene);
     }
 
