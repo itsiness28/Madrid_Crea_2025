@@ -1,4 +1,5 @@
-#speaker : Kenobi
+#speaker : 1
 Hellow there
-#speaker : Gribus
+Polla
+#speaker : 2
 General Kenobi 

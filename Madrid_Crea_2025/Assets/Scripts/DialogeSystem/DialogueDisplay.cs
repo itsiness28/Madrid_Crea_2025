@@ -3,9 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueDisplay : MonoBehaviour
 {
+    [SerializeField]
+    private Image p1;
+
+    [SerializeField]
+    private Image p2;
 
     [SerializeField]
     protected TextAsset inkJSON;
@@ -22,8 +29,9 @@ public class DialogueDisplay : MonoBehaviour
     private GameObject continueIcone;
     [SerializeField]
     private TMP_Text dialogueText;
+
     [SerializeField]
-    private TMP_Text displayNameText;
+    private string sceneName;
 
     private Story currentStory;
     private bool dialogueIsPlaying;
@@ -138,9 +146,9 @@ public class DialogueDisplay : MonoBehaviour
         dialogueText.text = "";
 
         //SetCurrentAudioInfo(defaultAudioInfo.ID);
-        
-        //Cargar la siguiente escena
 
+        //Cargar la siguiente escena
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 
     public void ContinueStory()
@@ -316,7 +324,17 @@ public class DialogueDisplay : MonoBehaviour
             if (tagKey == speakerTag)
             {
 
-                displayNameText.text = tagValue;
+                if (tagValue == "1")
+                {
+                    p1.color = Color.white;
+                    p2.color = Color.gray;
+                }
+                else if (tagValue == "2")
+                {
+                    p1.color = Color.gray;
+                    p2.color = Color.white;
+                }
+                
 
             }
             else if(tagKey == audioTag)
