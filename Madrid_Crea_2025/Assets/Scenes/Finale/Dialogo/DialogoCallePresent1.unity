@@ -186,8 +186,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9e8c69fff3be49841ac30cc46967cfb6, type: 2}
-  m_sharedMaterial: {fileID: 6920488957257253917, guid: 9e8c69fff3be49841ac30cc46967cfb6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 262f907b2c3799e49a1a18627e4cca77, type: 2}
+  m_sharedMaterial: {fileID: -768335683978502775, guid: 262f907b2c3799e49a1a18627e4cca77, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -211,8 +211,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 23
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -552,8 +552,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -223, y: 25}
-  m_SizeDelta: {x: 188.0047, y: 250.673}
+  m_AnchoredPosition: {x: -234.6804, y: 6}
+  m_SizeDelta: {x: 164.6439, y: 219.5252}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1025821125
 MonoBehaviour:
@@ -851,7 +851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueDisplay
   p1: {fileID: 1025821125}
   p2: {fileID: 1747796857}
-  inkJSON: {fileID: 4900000, guid: 47b0031118278f3448a9f0895c7ca1ba, type: 3}
+  inkJSON: {fileID: 4900000, guid: 3456e156e37f5d34f9ebeb208a41284b, type: 3}
   typingSpeed: 0.1
   dialogueManager: {fileID: 11400000, guid: 04372d97bdd74bb46b4f14b1ed88badd, type: 2}
   dialoguePanel: {fileID: 1453988461}
@@ -1113,8 +1113,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 225.1, y: 25}
-  m_SizeDelta: {x: 188.0047, y: 250.673}
+  m_AnchoredPosition: {x: 232, y: 6}
+  m_SizeDelta: {x: 164.6439, y: 219.5252}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1747796857
 MonoBehaviour:

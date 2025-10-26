@@ -334,6 +334,11 @@ public class DialogueDisplay : MonoBehaviour
                     p1.color = Color.gray;
                     p2.color = Color.white;
                 }
+                else if(tagValue == "3")
+                {
+                    p1.color = Color.gray;
+                    p2.color = Color.gray;
+                }
                 
 
             }
