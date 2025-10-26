@@ -10237,6 +10237,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 694155432}
     - target: {fileID: 3453216072735209469, guid: b43c60fd8e1d3c2439fe81508ebd3e39, type: 3}
+      propertyPath: nextScene
+      value: DialogoCallePast1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3453216072735209469, guid: b43c60fd8e1d3c2439fe81508ebd3e39, type: 3}
       propertyPath: spriteMask
       value: 
       objectReference: {fileID: 532147830}

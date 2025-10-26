@@ -5,15 +5,27 @@ public class MainMenu : MonoBehaviour
 {
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-
-    public void PlayGame()
+    [SerializeField]
+    private VolumenConfigurationSO v;
+    public void PlayGame(string Scene)
     {
-        SceneManager.LoadScene("1_Ilustracion");
+        SceneManager.LoadScene(Scene);
     }
 
-    public void Options()
+    public void MoreV()
     {
+        if (v.Volume + 0.1f <= 1)
+        {
+            v.Volume += 0.1f;
+        }
+    }
 
+    public void LessV()
+    {
+        if (v.Volume - 0.1f >= 0)
+        {
+            v.Volume -= 0.1f;
+        }
     }
 
     public void QuitGame()

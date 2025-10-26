@@ -10,6 +10,8 @@ public class Player_Movement : MonoBehaviour
     [SerializeField]
     PlayerData playerData;
 
+    [SerializeField]
+    private VolumenConfigurationSO v;
 
     float moveInput;
 
@@ -164,7 +166,7 @@ public class Player_Movement : MonoBehaviour
         float randomPitch = Random.Range(1.2f, 1.6f);
         AudioSource x = soundController.GetComponent<AudioSource>();
         x.pitch = randomPitch;
-        x.volume = 0.9f;
+        x.volume = 0.9f * v.Volume;
         soundController.PlaySonido(audioPasos);
     }
 
@@ -173,7 +175,7 @@ public class Player_Movement : MonoBehaviour
         float randomPitch = Random.Range(0.8f, 1.2f);
         AudioSource x = soundController.GetComponent<AudioSource>();
         x.pitch = randomPitch;
-        x.volume = 0.1f;
+        x.volume = 0.1f * v.Volume;
         soundController.PlaySonido(audioSalto);
     }
 

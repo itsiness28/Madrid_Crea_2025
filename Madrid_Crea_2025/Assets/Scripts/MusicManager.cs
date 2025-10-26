@@ -7,6 +7,9 @@ public class MusicManager : MonoBehaviour
 
     public static MusicManager Instance;
 
+    [SerializeField]
+    private VolumenConfigurationSO v;
+
     private void Awake()
     {
         if (Instance != null)
@@ -28,6 +31,7 @@ public class MusicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        sonido.volume = /*0.1f **/ v.Volume;
     }
 }

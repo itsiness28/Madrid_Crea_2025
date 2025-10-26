@@ -158,6 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player_Movement
   gameManager: {fileID: 0}
   playerData: {fileID: 11400000, guid: 560ccffbb7bce0242ad05e8ba37515e7, type: 2}
+  v: {fileID: 11400000, guid: 6da7132e4d8efe247b1b88633e3188fb, type: 2}
   groundCheckTransform: {fileID: 5907284179323367325}
   groundCheckRadius: 0.17
   groundLayer:
