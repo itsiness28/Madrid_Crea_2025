@@ -24,6 +24,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
 
     bool isGrounded;
+    Vector3 startPosition;
 
 
     Rigidbody2D rb;
@@ -54,7 +55,10 @@ public class Player_Movement : MonoBehaviour
 
         actions.Player.Move.canceled += MoveAction;
         actions.Player.Jump.canceled += JumpAction;
+
+        actions.Player.Reset.started += Reset_Action;
     }
+
 
     private void OnDisable()
     {
@@ -62,18 +66,19 @@ public class Player_Movement : MonoBehaviour
 
         actions.Player.Move.performed -= MoveAction;
         actions.Player.Jump.performed -= JumpAction;
+
+        actions.Player.Reset.started -= Reset_Action;
     }
 
     void Start()
     {
+        startPosition = transform.position;
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = playerData.Gravity;
         airStandTimer = 0;
     }
     void FixedUpdate()
     {
-
-
         isGrounded = Physics2D.OverlapBox(groundCheckTransform.position, new Vector2(groundCheckRadius * 2, 0.015f), 0, groundLayer);
 
 
@@ -122,6 +127,10 @@ public class Player_Movement : MonoBehaviour
         }
     }
 
+    private void Reset_Action(InputAction.CallbackContext obj)
+    {
+        transform.position = startPosition;
+    }
     private void MoveAction(InputAction.CallbackContext ctx)
     {
         moveInput = ctx.ReadValue<Vector2>().x;
