@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -22,6 +24,7 @@ public class GameManager : MonoBehaviour
     [Header("Dependencias")]
     [SerializeField] SpriteMask spriteMask;
     [SerializeField] Player_Movement player;
+    [SerializeField] Door door;
 
     public enum TimeZone { PAST, PRESENT}
     TimeZone currentTime;
@@ -85,8 +88,17 @@ public class GameManager : MonoBehaviour
 
     public void GoToNextScene()
     {
+        StartCoroutine(GoToNextSceneCorrutina());
+    }
+
+    IEnumerator GoToNextSceneCorrutina()
+    {
+        player.DisablePlayerMovement();
+        door.SetPliOpenTrigger();
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(nextScene);
     }
+
 
 
     void Start()

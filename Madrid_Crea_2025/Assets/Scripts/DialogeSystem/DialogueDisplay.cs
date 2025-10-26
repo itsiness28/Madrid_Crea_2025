@@ -74,6 +74,12 @@ public class DialogueDisplay : MonoBehaviour
 
     }
 
+    private void OnDisable()
+    {
+        dialogueManager.OnEnterDialogueMode -= EnterDialogueMode;
+        dialogueManager.OnContinuedialog -= ContinueButtom;
+    }
+
     private void Start()
     {
         dialogueManager.EnterDialogueMode(inkJSON);

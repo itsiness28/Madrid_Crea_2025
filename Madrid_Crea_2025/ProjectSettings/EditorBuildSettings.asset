@@ -17,30 +17,33 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/1_2.unity
     guid: a147c91396846a04a95349d98e54d9be
-  - enabled: 0
-    path: Assets/Scenes/Nivel_3.unity
-    guid: c5d1f5d5580fdf94aa173b9ca40c99b4
-  - enabled: 1
-    path: Assets/Scenes/1_1_MERGE_ESCENA.unity
-    guid: 2681725bce9ee9d43a063c522be99493
-  - enabled: 1
-    path: Assets/Scenes/Finale/Niveles/Nivel_1.unity
-    guid: 3b0c7a4373281c04c92d420b7499cd6b
   - enabled: 1
     path: Assets/Scenes/Finale/Dialogo/DialogoBarPast1.unity
     guid: df19a9eb267dc7347bdf09be3070a3fa
   - enabled: 1
-    path: Assets/Scenes/Finale/Dialogo/DialogoCallePast1.unity
-    guid: 66cdb50b3466df34cb2d4ea7a36e9e11
-  - enabled: 1
-    path: Assets/Scenes/Finale/Dialogo/DialogoCallePresent1.unity
-    guid: d76eda1c45006cb49b15a0e56b74dc35
+    path: Assets/Scenes/Finale/Niveles/Nivel_1.unity
+    guid: 3b0c7a4373281c04c92d420b7499cd6b
   - enabled: 1
     path: Assets/Scenes/Finale/Niveles/Nivel_2.unity
     guid: d117f3f23fcb3ba42853a2a1897c7627
   - enabled: 1
+    path: Assets/Scenes/Finale/Dialogo/DialogoCallePast1.unity
+    guid: 66cdb50b3466df34cb2d4ea7a36e9e11
+  - enabled: 1
+    path: Assets/Scenes/Nivel_3.unity
+    guid: c5d1f5d5580fdf94aa173b9ca40c99b4
+  - enabled: 1
+    path: Assets/Scenes/Nivel_4.unity
+    guid: 214778ce43c69264c837c117cba047ae
+  - enabled: 1
+    path: Assets/Scenes/Finale/Dialogo/DialogoCallePresent1.unity
+    guid: d76eda1c45006cb49b15a0e56b74dc35
+  - enabled: 1
     path: Assets/Scenes/Finale/Dialogo/Creditos.unity
     guid: 61793f1134296954ab3816c45dafc9b3
+  - enabled: 0
+    path: Assets/Scenes/1_1_MERGE_ESCENA.unity
+    guid: 2681725bce9ee9d43a063c522be99493
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
