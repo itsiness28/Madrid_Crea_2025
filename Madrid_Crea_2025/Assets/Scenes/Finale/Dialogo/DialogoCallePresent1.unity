@@ -857,7 +857,7 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1453988461}
   continueIcone: {fileID: 1276698014}
   dialogueText: {fileID: 126479260}
-  sceneName: MainMenu
+  sceneName: Creditos
 --- !u!114 &1486374408
 MonoBehaviour:
   m_ObjectHideFlags: 0
