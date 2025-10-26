@@ -23,6 +23,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1_1_MERGE_ESCENA.unity
     guid: 2681725bce9ee9d43a063c522be99493
+  - enabled: 1
+    path: Assets/Scenes/Finale/Niveles/Nivel_1.unity
+    guid: 3b0c7a4373281c04c92d420b7499cd6b
+  - enabled: 1
+    path: Assets/Scenes/Finale/Dialogo/DialogoBarPast1.unity
+    guid: df19a9eb267dc7347bdf09be3070a3fa
+  - enabled: 1
+    path: Assets/Scenes/Finale/Niveles/Nivel_2.unity
+    guid: d117f3f23fcb3ba42853a2a1897c7627
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
