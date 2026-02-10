@@ -31,5 +31,5 @@ public class PlayerData : ScriptableObject
     public float CoyoteTime { get => coyoteTime; }
     public float Heigth2AirStand { get => heigth2AirStand; }
     public float AirStandGravityMod { get => airStandGravityMod; }
-    public float JumpVelocity { get => jumpVelocity; }
+    public float JumpVelocity { get => jumpVelocity; set => jumpVelocity = value; }
 }
