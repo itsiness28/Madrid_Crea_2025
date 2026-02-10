@@ -44,6 +44,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/1_1_MERGE_ESCENA.unity
     guid: 2681725bce9ee9d43a063c522be99493
+  - enabled: 1
+    path: Assets/Scenes/Finale/Niveles/Nivel_2.5.unity
+    guid: 4d0c8c2dbd2a6a5458a4c8da87c12fdc
+  - enabled: 1
+    path: Assets/Scenes/Finale/Niveles/Nivel_0.unity
+    guid: 438de2ead7e8e594bb9b51c0fc30935f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

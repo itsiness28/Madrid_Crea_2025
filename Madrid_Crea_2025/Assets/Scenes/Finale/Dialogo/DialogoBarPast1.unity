@@ -552,7 +552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -229, y: 0.9576}
+  m_AnchoredPosition: {x: -229, y: 0.9575958}
   m_SizeDelta: {x: 151.9413, y: 202.5884}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1025821125
@@ -857,7 +857,7 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1453988461}
   continueIcone: {fileID: 1276698014}
   dialogueText: {fileID: 126479260}
-  sceneName: Nivel_1
+  sceneName: Nivel_0
 --- !u!114 &1486374408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1113,7 +1113,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 227, y: 0.9576}
+  m_AnchoredPosition: {x: 227, y: 0.9575958}
   m_SizeDelta: {x: 151.9413, y: 202.5884}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1747796857
