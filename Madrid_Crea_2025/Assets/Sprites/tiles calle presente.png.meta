@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ad99fb8fb89dddd408667519064e874f
+guid: 7e0a451cf6fed3742b66829c2e8c904e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1579981344789269675
-    second: tiles calle presente_0
+      213: -7934674723737762894
+    second: tiles calle pasado_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tiles calle presente_0
+      name: tiles calle pasado_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,14 +128,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55377188657c21ae0800000000000000
-      internalID: -1579981344789269675
+      spriteID: 2b30753e06f52e190800000000000000
+      internalID: -7934674723737762894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_1
+      name: tiles calle pasado_1
       rect:
         serializedVersion: 2
         x: 16
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8a74d5dbf83bf648a55ee8dcee64141
-      internalID: -1012050911
+      spriteID: 66d87c3eb83d0e84db92332f348c1956
+      internalID: -1438451473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_2
+      name: tiles calle pasado_2
       rect:
         serializedVersion: 2
         x: 32
@@ -172,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88c7b33ea563fea4a9570dc8366c5c9d
-      internalID: 1621652019
+      spriteID: b14e04f7d14c7de41b6852e0996c93e7
+      internalID: -1088203146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_3
+      name: tiles calle pasado_3
       rect:
         serializedVersion: 2
         x: 48
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5bc2cd4de119f24e9314838008912dc
-      internalID: -2106034984
+      spriteID: 8fb6aaf01aae29a45a689895c651718e
+      internalID: 1372727724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_4
+      name: tiles calle pasado_4
       rect:
         serializedVersion: 2
         x: 64
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a84d8c1c9ad1214c9d51adffb6040d5
-      internalID: -1912297576
+      spriteID: 5d9cad623eceb194480dc76d59589184
+      internalID: 70352547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_5
+      name: tiles calle pasado_5
       rect:
         serializedVersion: 2
         x: 80
@@ -238,14 +238,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2c47d71f599e57408ecaed8594f77ef
-      internalID: 2004057488
+      spriteID: 54731b61793bc6d4082a70c4af510428
+      internalID: 526788732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_6
+      name: tiles calle pasado_6
       rect:
         serializedVersion: 2
         x: 96
@@ -260,14 +260,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17cbeb8a02ed6e8419b9f73619591cf2
-      internalID: 1282271961
+      spriteID: ab7d8ae6158aea8478a8a4ca2d9cc4fb
+      internalID: -459502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_7
+      name: tiles calle pasado_7
       rect:
         serializedVersion: 2
         x: 112
@@ -282,14 +282,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91285a3642520f040a59dc726a2f9acc
-      internalID: -1873883697
+      spriteID: 048db39d0f0f52b4abe920b9cbf3242a
+      internalID: -503635842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_8
+      name: tiles calle pasado_8
       rect:
         serializedVersion: 2
         x: 0
@@ -304,14 +304,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d15fcc5e940942946a2fd7d31d6a06e6
-      internalID: -68783473
+      spriteID: f57376b8515701a47baf6a7d07c7aafc
+      internalID: 1330886933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_9
+      name: tiles calle pasado_9
       rect:
         serializedVersion: 2
         x: 16
@@ -326,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 454cf7a35fc4cd34e955d404bfbaf484
-      internalID: -2048239876
+      spriteID: 5da50010a313d88458e72fa5df257833
+      internalID: -1355225441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_10
+      name: tiles calle pasado_10
       rect:
         serializedVersion: 2
         x: 32
@@ -348,14 +348,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43d16a8f3428d5d48b38fb876a627b3d
-      internalID: 784019329
+      spriteID: 5fa8bec6d0463a64099a0d69f4db63af
+      internalID: 76723683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_11
+      name: tiles calle pasado_11
       rect:
         serializedVersion: 2
         x: 48
@@ -370,14 +370,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5e2486cfccd00f4190fa24e9fd984f7
-      internalID: -1747519968
+      spriteID: 61b77a9a3371e114287c8f71db051d00
+      internalID: 1280833778
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_12
+      name: tiles calle pasado_12
       rect:
         serializedVersion: 2
         x: 64
@@ -392,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 565b1d977477c114a8e6e7e22c641f09
-      internalID: 1510951190
+      spriteID: c5496df84b442864293fd98a743d4bb2
+      internalID: 1968202981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_13
+      name: tiles calle pasado_13
       rect:
         serializedVersion: 2
         x: 80
@@ -414,14 +414,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a496aae33bd230049b7cde53ff167fda
-      internalID: -1167733941
+      spriteID: 4622b6ac2b3ad22418f2abfb5b059091
+      internalID: -147074538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_14
+      name: tiles calle pasado_14
       rect:
         serializedVersion: 2
         x: 96
@@ -436,14 +436,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86f25ebc4dc967041bf29bb13f72b106
-      internalID: 950270410
+      spriteID: 25f6ea156717bbd4b9d2d374a04d5c20
+      internalID: 545311041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_15
+      name: tiles calle pasado_15
       rect:
         serializedVersion: 2
         x: 112
@@ -458,14 +458,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f258417190e74e14da4efcf17d467fd4
-      internalID: -127323308
+      spriteID: 464dc5e7954152b45b1a51022d893ab7
+      internalID: -1268938498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_16
+      name: tiles calle pasado_16
       rect:
         serializedVersion: 2
         x: 0
@@ -480,14 +480,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d857ed2faf5ce9845bcf7421be91160f
-      internalID: -651240207
+      spriteID: cea08e5584239f040a719be62da758e4
+      internalID: 1464540518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_17
+      name: tiles calle pasado_17
       rect:
         serializedVersion: 2
         x: 16
@@ -502,14 +502,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef3987e496b31124595b19030edbe04a
-      internalID: -144119874
+      spriteID: f84b6d4b673a2a245afdbfacb59d73d9
+      internalID: 552472927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_18
+      name: tiles calle pasado_18
       rect:
         serializedVersion: 2
         x: 32
@@ -524,14 +524,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d370a2ce48ccdd4e90ea108a0d01ead
-      internalID: -1336373899
+      spriteID: dfa52e2f2587ade419010d45435c71ff
+      internalID: 689967410
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_19
+      name: tiles calle pasado_19
       rect:
         serializedVersion: 2
         x: 48
@@ -546,14 +546,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19bd7456e89e81c46bbb1032f7562e5a
-      internalID: -510490638
+      spriteID: 0a2926f87bfe1414b9a179845334ded1
+      internalID: 84461253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_20
+      name: tiles calle pasado_20
       rect:
         serializedVersion: 2
         x: 64
@@ -568,14 +568,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adbf4c9b32cd1274885a06d3a941a957
-      internalID: 1560479467
+      spriteID: c3ae576ba710a354c887f10e037f8877
+      internalID: 1121252346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_21
+      name: tiles calle pasado_21
       rect:
         serializedVersion: 2
         x: 80
@@ -590,14 +590,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b628a8a0201f78448ba5c7854f565ded
-      internalID: -2144724215
+      spriteID: 64bd526412b65d548b38ae2c53b71a99
+      internalID: 1520088234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_22
+      name: tiles calle pasado_22
       rect:
         serializedVersion: 2
         x: 96
@@ -612,14 +612,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc3f1b91751f4b3458b2f6883a2bbcc1
-      internalID: 1689256164
+      spriteID: ba110e8c65d06ee4cad290a756366002
+      internalID: 1038683024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_23
+      name: tiles calle pasado_23
       rect:
         serializedVersion: 2
         x: 112
@@ -634,14 +634,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c18c1d00aeeae62419f88632e9830f09
-      internalID: 993375949
+      spriteID: f352c7915cbd5c64185c35847bea3fa0
+      internalID: -516373436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_24
+      name: tiles calle pasado_24
       rect:
         serializedVersion: 2
         x: 0
@@ -656,14 +656,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52ed0082795082a4f944f04068ce1304
-      internalID: 887826283
+      spriteID: 8b16371f45b5da24daaf070089d73c1b
+      internalID: -1448418971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_25
+      name: tiles calle pasado_25
       rect:
         serializedVersion: 2
         x: 16
@@ -678,14 +678,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e83e740fa559f9f4aa0a47c76d864679
-      internalID: 14181384
+      spriteID: 58f3b881e222a6247b54c3ab0d01aaee
+      internalID: 463385428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_26
+      name: tiles calle pasado_26
       rect:
         serializedVersion: 2
         x: 32
@@ -700,14 +700,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c1156c83abf3c84ea22f0d9a45056ac
-      internalID: -20804172
+      spriteID: 686cfed752783db4b8e65825a76e2dec
+      internalID: 2061129710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_27
+      name: tiles calle pasado_27
       rect:
         serializedVersion: 2
         x: 48
@@ -722,14 +722,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71bc2e38cbc41684e8f002d801ec4997
-      internalID: 495618417
+      spriteID: a5dd137380c97324f9746011fa951a93
+      internalID: 1697349062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_28
+      name: tiles calle pasado_28
       rect:
         serializedVersion: 2
         x: 64
@@ -744,14 +744,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96cf4bf16b0efa4429ab47a7f09b7745
-      internalID: -4314978
+      spriteID: 1507439f25bd90740b6b474ca2a64d5b
+      internalID: 1504731325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_29
+      name: tiles calle pasado_29
       rect:
         serializedVersion: 2
         x: 80
@@ -766,14 +766,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b877a7b8a8b7c984297fa4577eda1f86
-      internalID: -1570024880
+      spriteID: c76a8ba12d1cb274fb477f63e221bdf0
+      internalID: 1464928459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_30
+      name: tiles calle pasado_30
       rect:
         serializedVersion: 2
         x: 96
@@ -788,14 +788,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 860b7a27c46e5da43b21f35148da6ca5
-      internalID: -1994172961
+      spriteID: ddb7f24c764f1d74da6c482273954141
+      internalID: 228379224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_31
+      name: tiles calle pasado_31
       rect:
         serializedVersion: 2
         x: 112
@@ -810,14 +810,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5960a4e152d56df41a5905c5662f89aa
-      internalID: -180108633
+      spriteID: 630304c16c55ce546b795d35b1897dbf
+      internalID: -2083813171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_32
+      name: tiles calle pasado_32
       rect:
         serializedVersion: 2
         x: 0
@@ -832,14 +832,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4134098a8217e854ca45f071defb4acd
-      internalID: 1563591101
+      spriteID: 4e8d11912e9114447b1527c9665902d6
+      internalID: 1642920275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_33
+      name: tiles calle pasado_33
       rect:
         serializedVersion: 2
         x: 16
@@ -854,14 +854,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c443e264ba4dc4245bfe9ea05123ce34
-      internalID: -1878957005
+      spriteID: 9e8cbc32c062f4243b4c0835695db647
+      internalID: 882188968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_34
+      name: tiles calle pasado_34
       rect:
         serializedVersion: 2
         x: 32
@@ -876,14 +876,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdd66069b645d3441b2c08b03be06be9
-      internalID: 72294630
+      spriteID: 957d79ebdcaf07c4a9d81e6ffe886397
+      internalID: -673255195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_35
+      name: tiles calle pasado_35
       rect:
         serializedVersion: 2
         x: 48
@@ -898,14 +898,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ea153168ed36994eb2f2e360385b13b
-      internalID: -266947084
+      spriteID: 0826013ba487e124f88dda14dd3e2b86
+      internalID: -1856138956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_36
+      name: tiles calle pasado_36
       rect:
         serializedVersion: 2
         x: 64
@@ -920,14 +920,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4ce0561b6000a04c8fe99d1e3b92381
-      internalID: -1638110394
+      spriteID: ec384f53f9d86fb4e95db4388397a0ec
+      internalID: -2003887369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_37
+      name: tiles calle pasado_37
       rect:
         serializedVersion: 2
         x: 80
@@ -942,14 +942,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecee488d24e5773459af97caf13d31d5
-      internalID: 1702428642
+      spriteID: 98d17772259a3dc44ad31bbbce213bed
+      internalID: -929402817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_38
+      name: tiles calle pasado_38
       rect:
         serializedVersion: 2
         x: 96
@@ -964,14 +964,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2905098547df5c54aa2de0031b2578dd
-      internalID: -242198131
+      spriteID: 91f9b3bc4d5f7d741a980482110b5f2d
+      internalID: 345819613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_39
+      name: tiles calle pasado_39
       rect:
         serializedVersion: 2
         x: 112
@@ -986,14 +986,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a9071d82e01c634dab5e0a2dc92d3fc
-      internalID: 930561082
+      spriteID: b1dd4dbd86530224cb88c8ea96c5e459
+      internalID: -2059652382
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_40
+      name: tiles calle pasado_40
       rect:
         serializedVersion: 2
         x: 0
@@ -1008,14 +1008,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5bb22d9222425c42bfcb4a9ff6673c0
-      internalID: 1242757707
+      spriteID: b50adb0895f26114ca30b95f98bac836
+      internalID: -1801363917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_41
+      name: tiles calle pasado_41
       rect:
         serializedVersion: 2
         x: 16
@@ -1030,14 +1030,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be5378058bf990d44b85aef71f1d58e0
-      internalID: 1668406562
+      spriteID: 4567667c3f2af0f4aae64ddc757cbf1d
+      internalID: 1383223866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_42
+      name: tiles calle pasado_42
       rect:
         serializedVersion: 2
         x: 32
@@ -1052,14 +1052,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22498119ec4876e4e8a7624985e0093f
-      internalID: -489215174
+      spriteID: dafb912ad31d6ff4ca9f99b0d989f151
+      internalID: -1062910155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_43
+      name: tiles calle pasado_43
       rect:
         serializedVersion: 2
         x: 48
@@ -1074,14 +1074,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ea3f79f0d2ee8b4ca86c7ccc0ea875b
-      internalID: 1551192654
+      spriteID: 8890011223d2b0a48af4904135e35ef6
+      internalID: -2046369503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_44
+      name: tiles calle pasado_44
       rect:
         serializedVersion: 2
         x: 64
@@ -1096,14 +1096,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a05a207890f17b47baeb8d524564716
-      internalID: 1766619094
+      spriteID: e9b0a4b959eb032478eb5004a2603c0a
+      internalID: 2006850202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles calle presente_45
+      name: tiles calle pasado_45
       rect:
         serializedVersion: 2
         x: 80
@@ -1118,8 +1118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c15e4dcfdd176534eae3da4b5cea1713
-      internalID: -1047202062
+      spriteID: 6f7fc7c743721314385ac0e490c481dc
+      internalID: -2015733564
       vertices: []
       indices: 
       edges: []
@@ -1128,7 +1128,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3ae569f0137afba41bf9dfe6945434cc
+    spriteID: 36011b1715bcf824a9d844bbe4a4c741
     internalID: 0
     vertices: []
     indices: 
@@ -1140,52 +1140,52 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      tiles calle presente_0: -1579981344789269675
-      tiles calle presente_1: -1012050911
-      tiles calle presente_10: 784019329
-      tiles calle presente_11: -1747519968
-      tiles calle presente_12: 1510951190
-      tiles calle presente_13: -1167733941
-      tiles calle presente_14: 950270410
-      tiles calle presente_15: -127323308
-      tiles calle presente_16: -651240207
-      tiles calle presente_17: -144119874
-      tiles calle presente_18: -1336373899
-      tiles calle presente_19: -510490638
-      tiles calle presente_2: 1621652019
-      tiles calle presente_20: 1560479467
-      tiles calle presente_21: -2144724215
-      tiles calle presente_22: 1689256164
-      tiles calle presente_23: 993375949
-      tiles calle presente_24: 887826283
-      tiles calle presente_25: 14181384
-      tiles calle presente_26: -20804172
-      tiles calle presente_27: 495618417
-      tiles calle presente_28: -4314978
-      tiles calle presente_29: -1570024880
-      tiles calle presente_3: -2106034984
-      tiles calle presente_30: -1994172961
-      tiles calle presente_31: -180108633
-      tiles calle presente_32: 1563591101
-      tiles calle presente_33: -1878957005
-      tiles calle presente_34: 72294630
-      tiles calle presente_35: -266947084
-      tiles calle presente_36: -1638110394
-      tiles calle presente_37: 1702428642
-      tiles calle presente_38: -242198131
-      tiles calle presente_39: 930561082
-      tiles calle presente_4: -1912297576
-      tiles calle presente_40: 1242757707
-      tiles calle presente_41: 1668406562
-      tiles calle presente_42: -489215174
-      tiles calle presente_43: 1551192654
-      tiles calle presente_44: 1766619094
-      tiles calle presente_45: -1047202062
-      tiles calle presente_5: 2004057488
-      tiles calle presente_6: 1282271961
-      tiles calle presente_7: -1873883697
-      tiles calle presente_8: -68783473
-      tiles calle presente_9: -2048239876
+      tiles calle pasado_0: -7934674723737762894
+      tiles calle pasado_1: -1438451473
+      tiles calle pasado_10: 76723683
+      tiles calle pasado_11: 1280833778
+      tiles calle pasado_12: 1968202981
+      tiles calle pasado_13: -147074538
+      tiles calle pasado_14: 545311041
+      tiles calle pasado_15: -1268938498
+      tiles calle pasado_16: 1464540518
+      tiles calle pasado_17: 552472927
+      tiles calle pasado_18: 689967410
+      tiles calle pasado_19: 84461253
+      tiles calle pasado_2: -1088203146
+      tiles calle pasado_20: 1121252346
+      tiles calle pasado_21: 1520088234
+      tiles calle pasado_22: 1038683024
+      tiles calle pasado_23: -516373436
+      tiles calle pasado_24: -1448418971
+      tiles calle pasado_25: 463385428
+      tiles calle pasado_26: 2061129710
+      tiles calle pasado_27: 1697349062
+      tiles calle pasado_28: 1504731325
+      tiles calle pasado_29: 1464928459
+      tiles calle pasado_3: 1372727724
+      tiles calle pasado_30: 228379224
+      tiles calle pasado_31: -2083813171
+      tiles calle pasado_32: 1642920275
+      tiles calle pasado_33: 882188968
+      tiles calle pasado_34: -673255195
+      tiles calle pasado_35: -1856138956
+      tiles calle pasado_36: -2003887369
+      tiles calle pasado_37: -929402817
+      tiles calle pasado_38: 345819613
+      tiles calle pasado_39: -2059652382
+      tiles calle pasado_4: 70352547
+      tiles calle pasado_40: -1801363917
+      tiles calle pasado_41: 1383223866
+      tiles calle pasado_42: -1062910155
+      tiles calle pasado_43: -2046369503
+      tiles calle pasado_44: 2006850202
+      tiles calle pasado_45: -2015733564
+      tiles calle pasado_5: 526788732
+      tiles calle pasado_6: -459502
+      tiles calle pasado_7: -503635842
+      tiles calle pasado_8: 1330886933
+      tiles calle pasado_9: -1355225441
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
