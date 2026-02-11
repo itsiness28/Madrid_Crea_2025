@@ -43,14 +43,14 @@ GameObject:
   - component: {fileID: 3985802074113784642}
   - component: {fileID: 6870287108111312064}
   - component: {fileID: 3141279934843159714}
+  - component: {fileID: 7892969474381481666}
   - component: {fileID: 1461708255560426761}
   - component: {fileID: 1303740381496410252}
   - component: {fileID: 8234617410532071563}
   - component: {fileID: 3879118343568197956}
-  - component: {fileID: 7892969474381481666}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,6 +168,28 @@ MonoBehaviour:
   soundController: {fileID: 0}
   audioPasos: {fileID: 8300000, guid: 31cd8d5dcebf04443bfe0259f9186bf3, type: 3}
   audioSalto: {fileID: 8300000, guid: 32dea3911b14ad24492f67a729f800a9, type: 3}
+--- !u!114 &7892969474381481666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394073528169092640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74974f7d4ab7bfd409a9a69fa00be605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
+  inputSO: {fileID: 11400000, guid: 2476165934f94524cb4c60f5d7d2516c, type: 2}
+  playerData: {fileID: 11400000, guid: 560ccffbb7bce0242ad05e8ba37515e7, type: 2}
+  rb: {fileID: 1461708255560426761}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 192
+  v: {fileID: 11400000, guid: 6da7132e4d8efe247b1b88633e3188fb, type: 2}
+  soundController: {fileID: 0}
+  audioPasos: {fileID: 8300000, guid: 31cd8d5dcebf04443bfe0259f9186bf3, type: 3}
+  audioSalto: {fileID: 8300000, guid: 32dea3911b14ad24492f67a729f800a9, type: 3}
 --- !u!50 &1461708255560426761
 Rigidbody2D:
   serializedVersion: 5
@@ -248,7 +270,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394073528169092640}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -293,21 +315,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7892969474381481666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7394073528169092640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74974f7d4ab7bfd409a9a69fa00be605, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
-  inputSO: {fileID: 11400000, guid: 2476165934f94524cb4c60f5d7d2516c, type: 2}
-  playerData: {fileID: 11400000, guid: 560ccffbb7bce0242ad05e8ba37515e7, type: 2}
-  rb: {fileID: 1461708255560426761}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 192

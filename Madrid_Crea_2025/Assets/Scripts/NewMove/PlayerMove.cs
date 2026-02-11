@@ -32,6 +32,17 @@ public class PlayerMove : MonoBehaviour
     public Vector2 Velocity { get => velocity; }
     public bool Below { get => below; }
 
+
+
+    [Header("Audio")]
+    [SerializeField]
+    private VolumenConfigurationSO v;
+    [SerializeField] SoundController soundController;
+    [SerializeField] AudioClip audioPasos;
+    [SerializeField] AudioClip audioSalto;
+
+
+
     private void OnEnable()
     {
         inputSO.OnRunAction += SetDirectionalInput;
@@ -110,6 +121,7 @@ public class PlayerMove : MonoBehaviour
             velocity.y = playerData.JumpVelocity;
             coyoteTimer = 0;
             inputBufferTimer = 0;
+            PlayAudioSalto();
         }
     }
     private void OnCanceledJumpInput()
@@ -126,7 +138,7 @@ public class PlayerMove : MonoBehaviour
 
 
 
-    void CalculateVelocity()
+    private void CalculateVelocity()
     {
 
         velocity.x = directionalInput.x * playerData.MoveSpeed;
@@ -152,5 +164,29 @@ public class PlayerMove : MonoBehaviour
 
 
         velocity.y = Mathf.Clamp(velocity.y, -playerData.TerminalSpeed, playerData.JumpVelocity);
+    }
+
+    public void Hola()
+    {
+        float randomPitch = Random.Range(1.2f, 1.6f);
+        AudioSource x = soundController.GetComponent<AudioSource>();
+        x.pitch = randomPitch;
+        x.volume = 0.9f * v.Volume;
+        soundController.PlaySonido(audioPasos);
+    }
+
+    public void PlayAudioPasos()
+    {
+
+    }
+
+
+    private void PlayAudioSalto()
+    {
+        float randomPitch = Random.Range(0.8f, 1.2f);
+        AudioSource x = soundController.GetComponent<AudioSource>();
+        x.pitch = randomPitch;
+        x.volume = 0.1f * v.Volume;
+        soundController.PlaySonido(audioSalto);
     }
 }
