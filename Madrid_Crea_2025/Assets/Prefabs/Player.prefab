@@ -136,14 +136,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394073528169092640}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c6cab36901bc864cbafb06dede5d48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimatorControler
   animator: {fileID: 3879118343568197956}
   spriteRenderer: {fileID: 3985802074113784642}
-  player: {fileID: 3141279934843159714}
+  player: {fileID: 7892969474381481666}
   rb: {fileID: 1461708255560426761}
 --- !u!114 &3141279934843159714
 MonoBehaviour:
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394073528169092640}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -311,4 +311,3 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 192
-  below: 0

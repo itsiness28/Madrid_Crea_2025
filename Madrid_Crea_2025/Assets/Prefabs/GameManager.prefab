@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d48dccdf6a7181d47bd974a6d2492c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  inputSO: {fileID: 11400000, guid: 2476165934f94524cb4c60f5d7d2516c, type: 2}
   pastTileMap: {fileID: 0}
   presentTileMap: {fileID: 0}
   previousScene: MainMenu
@@ -51,3 +52,6 @@ MonoBehaviour:
   stopTimeTimer: 1.75
   spriteMask: {fileID: 0}
   player: {fileID: 0}
+  door: {fileID: 0}
+  sceneFader: {fileID: 0}
+  checkers: []

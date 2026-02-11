@@ -24,10 +24,13 @@ public class PlayerMove : MonoBehaviour
     #endregion
 
     private Vector2 directionalInput;
-    [SerializeField]
+
     private bool below;
 
     private Vector2 velocity;
+
+    public Vector2 Velocity { get => velocity; }
+    public bool Below { get => below; }
 
     private void OnEnable()
     {

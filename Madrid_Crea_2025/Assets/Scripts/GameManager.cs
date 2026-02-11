@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public InputSystem_Actions actions;
+    [SerializeField]
+    private InputSO inputSO;
     [Header("Past & Present TileMaps")]
     [SerializeField] GameObject pastTileMap;
     [SerializeField] GameObject presentTileMap;
@@ -23,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Dependencias")]
     [SerializeField] SpriteMask spriteMask;
-    [SerializeField] Player_Movement player;
+    [SerializeField] PlayerMove player;
     [SerializeField] Door door;
     [SerializeField] SceneFader sceneFader;
 
@@ -33,40 +34,39 @@ public class GameManager : MonoBehaviour
     public enum TimeZone { PAST, PRESENT}
     TimeZone currentTime;
 
-    private void Awake()
-    {
-        actions = new InputSystem_Actions();
+    //private void Awake()
+    //{
+    //    actions = new InputSystem_Actions();
 
-        currentTime = TimeZone.PRESENT;
-        //presentTileMap.SetActive(true);
-        //pastTileMap.SetActive(false);
-    }
+    //    //presentTileMap.SetActive(true);
+    //    //pastTileMap.SetActive(false);
+    //}
 
     private void OnEnable()
     {
-        actions.Player.Enable();
+        currentTime = TimeZone.PRESENT;
+        //actions.Player.Enable();
 
-        actions.Player.TimeTrigger.started += TimeTrigger;
+        inputSO.TimeTrigger += TimeTrigger;
     }
     private void OnDisable()
     {
-        actions.Player.Disable();
 
-        actions.Player.TimeTrigger.started -= TimeTrigger;
+        inputSO.TimeTrigger -= TimeTrigger;
     }
 
-    private void TimeTrigger(InputAction.CallbackContext ctx)
+    private void TimeTrigger()
     {
-        if (player.IsGrounded)
+        if (player.Below)
         {
             foreach (Checker checker in checkers)
             {
                 checker.Check();
             }
-            actions.Player.Disable();
+            inputSO.SwitchMode(InputMode.disableMode);
             if (currentTime == TimeZone.PRESENT)
             {
-                player.DisablePlayerMovement();
+                inputSO.SwitchMode(InputMode.disableMode);
                 changingTiming = true;
 
                 spriteMask.SetGoToPastAnimTrigger();
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                player.DisablePlayerMovement();
+                inputSO.SwitchMode(InputMode.disableMode);
                 changingTiming = true;
 
                 spriteMask.SetGoToPresentTrigger();
@@ -101,11 +101,12 @@ public class GameManager : MonoBehaviour
 
     IEnumerator GoToNextSceneCorrutina()
     {
-        player.DisablePlayerMovement();
+        inputSO.SwitchMode(InputMode.disableMode);
         door.SetPliOpenTrigger();
         yield return new WaitForSeconds(1f);
         sceneFader.SetFadeOutTrigger();
         yield return new WaitForSeconds(1.5f);
+        inputSO.SwitchMode(InputMode.moveMode);
         SceneManager.LoadScene(nextScene);
     }
 
@@ -126,8 +127,7 @@ public class GameManager : MonoBehaviour
             {
                 actualTimer = stopTimeTimer;
                 changingTiming = false;
-                player.EnablePlayerMovement();
-                actions.Player.Enable();
+                inputSO.SwitchMode(InputMode.moveMode);
                 if (currentTime == TimeZone.PRESENT)
                 {
                     presentTileMap.SetActive(true);

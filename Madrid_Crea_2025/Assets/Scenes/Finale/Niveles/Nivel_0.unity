@@ -5644,6 +5644,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1011a0be3c11d7d418f38e8eee9d2aa3, type: 3}
+--- !u!114 &587917613 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7892969474381481666, guid: 1011a0be3c11d7d418f38e8eee9d2aa3, type: 3}
+  m_PrefabInstance: {fileID: 587917612}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74974f7d4ab7bfd409a9a69fa00be605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
 --- !u!114 &646346947 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1013200802623653371, guid: 64acc7e08d3a5c345bd8a2152031b4e2, type: 3}
@@ -5661,7 +5672,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 587917612}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 158ee5f8b67259e418f05c6a96ae76f6, type: 3}
   m_Name: 
@@ -10995,7 +11006,11 @@ PrefabInstance:
     - target: {fileID: 3453216072735209469, guid: b43c60fd8e1d3c2439fe81508ebd3e39, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 694155432}
+      objectReference: {fileID: 587917613}
+    - target: {fileID: 3453216072735209469, guid: b43c60fd8e1d3c2439fe81508ebd3e39, type: 3}
+      propertyPath: inputSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 2476165934f94524cb4c60f5d7d2516c, type: 2}
     - target: {fileID: 3453216072735209469, guid: b43c60fd8e1d3c2439fe81508ebd3e39, type: 3}
       propertyPath: nextScene
       value: Nivel_1

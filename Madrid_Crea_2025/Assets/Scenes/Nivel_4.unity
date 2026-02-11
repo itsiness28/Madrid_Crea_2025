@@ -427,11 +427,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 587917612}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 158ee5f8b67259e418f05c6a96ae76f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Movement
+--- !u!114 &587917614 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7892969474381481666, guid: 1011a0be3c11d7d418f38e8eee9d2aa3, type: 3}
+  m_PrefabInstance: {fileID: 587917612}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74974f7d4ab7bfd409a9a69fa00be605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
 --- !u!1001 &634475842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1590,7 +1601,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 26
+      m_TileSpriteIndex: 29
       m_TileMatrixIndex: 0
       m_TileColorIndex: 1
       m_TileObjectToInstantiateIndex: 65535
@@ -1880,7 +1891,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 25
+      m_TileSpriteIndex: 28
       m_TileMatrixIndex: 0
       m_TileColorIndex: 1
       m_TileObjectToInstantiateIndex: 65535
@@ -3735,16 +3746,16 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 4
+    m_Data: {fileID: 2061129710, guid: 3bcb84bc9ccf5b84191eb78c57260204, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -147074538, guid: 3bcb84bc9ccf5b84191eb78c57260204, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1968202981, guid: 3bcb84bc9ccf5b84191eb78c57260204, type: 3}
-  - m_RefCount: 4
-    m_Data: {fileID: 2061129710, guid: 3bcb84bc9ccf5b84191eb78c57260204, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: -2015733564, guid: 3bcb84bc9ccf5b84191eb78c57260204, type: 3}
   - m_RefCount: 13
@@ -4189,7 +4200,7 @@ PrefabInstance:
     - target: {fileID: 3453216072735209469, guid: b43c60fd8e1d3c2439fe81508ebd3e39, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 587917613}
+      objectReference: {fileID: 587917614}
     - target: {fileID: 3453216072735209469, guid: b43c60fd8e1d3c2439fe81508ebd3e39, type: 3}
       propertyPath: nextScene
       value: DialogoCallePresent1
@@ -4677,7 +4688,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 1
       m_TileObjectToInstantiateIndex: 65535
@@ -6707,7 +6718,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 1
       m_TileObjectToInstantiateIndex: 65535
@@ -7054,12 +7065,12 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -7934674723737762894, guid: 7e0a451cf6fed3742b66829c2e8c904e, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 689967410, guid: 7e0a451cf6fed3742b66829c2e8c904e, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 526788732, guid: 7e0a451cf6fed3742b66829c2e8c904e, type: 3}
   - m_RefCount: 1

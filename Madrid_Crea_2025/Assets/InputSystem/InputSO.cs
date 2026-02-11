@@ -10,6 +10,8 @@ public class InputSO : ScriptableObject
     public Action OnJumpAnction;
     public Action OnJumpCanceledAction;
 
+    public Action TimeTrigger;
+
     private void OnEnable()
     {
         controller = new Controller();
@@ -21,8 +23,9 @@ public class InputSO : ScriptableObject
         controller.Player.Jump.started += OnJump;
         controller.Player.Jump.canceled += OnJumpCanceled;
 
-
+        controller.Player.TimeTrigger.started += OnTimeTrigger;
     }
+
 
     private void OnDisable()
     {
@@ -33,6 +36,7 @@ public class InputSO : ScriptableObject
         controller.Player.Jump.canceled -= OnJumpCanceled;
         controller.Player.Disable();
 
+        controller.Player.TimeTrigger.started -= OnTimeTrigger;
     }
 
     private void OnRunCanceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
@@ -52,4 +56,33 @@ public class InputSO : ScriptableObject
     {
         OnJumpCanceledAction?.Invoke();
     }
+    private void OnTimeTrigger(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+
+        TimeTrigger?.Invoke();
+    }
+
+    public void SwitchMode(InputMode mode)
+    {
+        switch (mode)
+        {
+            case InputMode.moveMode:
+
+                controller.Player.Enable();
+
+                break;
+
+            case InputMode.disableMode:
+
+                controller.Player.Disable();
+
+                break;
+
+            default:
+                break;
+        }
+    }
 }
+
+
+public enum InputMode { moveMode, disableMode}
