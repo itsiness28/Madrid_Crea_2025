@@ -123,7 +123,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""852140f2-7766-474d-8707-702459ba45f3"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": ""Hold"",
                     ""initialStateCheck"": false
@@ -324,6 +324,61 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Movement_Joystick"",
+                    ""id"": ""ba7817aa-d1f9-4e66-88bd-28c65117ed8d"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""32a9ad10-2b16-474a-b28e-07217445f13d"",
+                    ""path"": ""<Joystick>/stick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""f1169eda-d1d3-4826-90ca-c7b1d3f54a2d"",
+                    ""path"": ""<Joystick>/stick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""7a410b0e-30f2-4157-b5a9-6f62e3259809"",
+                    ""path"": ""<Joystick>/stick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""190ece3b-e764-4033-b17f-a42ad1154fc0"",
+                    ""path"": ""<Joystick>/stick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
@@ -536,6 +591,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""c05969b9-eef1-4f15-8bbb-b4bfd48f8429"",
+                    ""path"": ""<Joystick>/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""1534dc16-a6aa-499d-9c3a-22b47347b52a"",
                     ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
@@ -580,6 +646,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""2ba87fae-5160-4c8b-9239-c7a6e030ded2"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""4f4649ac-64a8-4a73-af11-b3faef356a4d"",
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
@@ -604,6 +681,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""1a943d25-accc-4ad5-aa99-70fc94a2e560"",
                     ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TimeTrigger"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""38c87b19-becd-437d-b533-0a7b4753e575"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button2"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
